@@ -1,0 +1,13 @@
+---
+title: All National Parks
+layout: base
+---
+<h1>All National Parks</h1>
+<p>All of these links should link to pages that were automatically generated through 11ty pagination</p>
+<ul>
+  {% for item in collections.parks %}
+    <li>
+      <a href="{{ item.url }}">{{ item.data.title }}</a>
+    </li>
+  {% endfor %}
+</ul>

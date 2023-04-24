@@ -1,0 +1,22 @@
+---
+title: National Parks
+layout: base
+pagination:
+    data: parks.data
+    size: 1
+    alias: park
+    addAllPagesToCollections: true
+permalink: /parks/{{ park.parkCode }}/
+tags:
+- "parks"
+eleventyComputed:
+  title: "{{ park.fullName }}"
+---
+paginated page
+<h2>{{ park.fullName }} | {{ park.parkCode }}</h2>
+<p>{{ park.description }}</p>
+<img
+  src="{{ park.images[0].url }}"
+  alt="{{ park.images[0].altText }}"
+  width="300"
+  height="300">
