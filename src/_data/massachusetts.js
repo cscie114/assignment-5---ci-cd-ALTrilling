@@ -2,7 +2,7 @@ require("dotenv").config();
 // https://www.11ty.dev/docs/plugins/fetch/
 
 const EleventyFetch = require("@11ty/eleventy-fetch");
-const api_url = "https://developer.nps.gov/api/v1/parks"
+const api_url = "https://developer.nps.gov/api/v1/parks";
 
 const query = new URLSearchParams({
     api_key: process.env.NPS_API_KEY,
@@ -11,7 +11,7 @@ const query = new URLSearchParams({
     limit: 10
 });
 
-console.log(api_url + "?" + query)
+console.log(api_url + "?" + query);
 
 // use eleventy-fetch to fetch data from the API
 // make sure to return the data as JSON
