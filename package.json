@@ -8,7 +8,7 @@
         "test:unit": "jest --passWithNoTests",
         "build": "eleventy",
         "start": "eleventy --serve",
-        "lint": "npx eslint src/**/*.js"
+        "lint": "npx eslint src/**/*.js && npx eslint netlify/functions"
     },
     "repository": {
         "type": "git",
