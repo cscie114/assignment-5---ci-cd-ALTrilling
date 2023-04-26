@@ -2,7 +2,7 @@ const api_url = "https://developer.nps.gov/api/v1/places";
 
 
 const handler = async function (event, context) {
-    const fetch = (await import("node-fetch")).default
+    const fetch = (await import("node-fetch")).default;
     const park_code = event.queryStringParameters.park_code;
     // http://url/.netlify/functions/hello?park_code=[park_code]
 
