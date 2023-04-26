@@ -1,10 +1,9 @@
 const api_url = "https://developer.nps.gov/api/v1/places"
 
 
-
 // video 12, 1:24:09
 
-exports.handler = async (event, context) => {
+const handler = async function (event, context) {
     const park_code = event.queryStringParameters.park_code
     // http://localhost:8888/.netlify/functions/hello?park_code=[park_code]
 
@@ -37,11 +36,9 @@ exports.handler = async (event, context) => {
         console.log(err)
         return {
             statusCode: 500,
-            body: JSON.stringify({ err: err.message })
+            body: JSON.stringify({ err_message: err.message })
         };
     }
-
-
-
-
 }
+
+module.exports = { handler };
