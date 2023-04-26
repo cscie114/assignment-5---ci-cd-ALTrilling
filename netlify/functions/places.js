@@ -1,5 +1,4 @@
-const fetch = require("node-fetch");
-
+import fetch from "node-fetch";
 const api_url = "https://developer.nps.gov/api/v1/places"
 
 
