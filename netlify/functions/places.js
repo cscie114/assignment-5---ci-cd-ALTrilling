@@ -9,7 +9,7 @@ const handler = async function (event, context) {
     const params = new URLSearchParams({
         limit: 10,
         api_key: process.env.NPS_API_KEY,
-        park_code: park_code
+        parkCode: park_code
     });
     try {
         const response = await fetch(`${api_url}?${params}`, {
